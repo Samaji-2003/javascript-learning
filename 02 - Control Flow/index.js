@@ -29,3 +29,11 @@ if(isStudent){
 }
 
 //checked property
+document.getElementById("btn").onclick = function(){
+    let isChecked = document.getElementById("id1").checked;
+    if(isChecked){
+        document.getElementById("output").innerText = "Checkbox is checked.";
+    }else{
+        document.getElementById("output").innerText = "Checkbox is not checked.";
+    }
+}
