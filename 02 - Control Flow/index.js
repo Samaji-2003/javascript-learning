@@ -135,7 +135,7 @@ let fruit = "Watermelon";
 let word1 =fruit.slice(0,5); // "Water"
 console.log(word1);
 
-let word2 = fruit.slice(5, 10); // "melon"
+let word2 = fruit.slice(5); // "melon"
 console.log(word2);
 
 let word3 = fruit.slice(-3); // "lon"
@@ -148,3 +148,11 @@ console.log(word4);
 let email = "samaji@example.com";
 let emailUser = email.slice(0, email.indexOf("@")); // "samaji"
 console.log(emailUser);
+
+//method chaining
+
+let un = window.prompt("Enter your name:").trim().toLowerCase();
+console.log(un);
+
+un = un.charAt(0).toUpperCase() + un.slice(1).toLowerCase();
+console.log(un);
