@@ -156,3 +156,49 @@ console.log(un);
 
 un = un.charAt(0).toUpperCase() + un.slice(1).toLowerCase();
 console.log(un);
+
+//logical operators
+
+const temp = 20;
+
+if(temp >0 && temp <= 30){
+    console.log("The weather is good.");
+}
+
+else{
+    console.log("The weather is bad.");
+}
+
+if(temp >20 || temp < 30){
+    console.log("The weather is nice.");
+}
+
+
+const isSunny = true;
+
+if(!isSunny){
+    console.log("It is not sunny today.");
+}
+
+else
+    console.log("It is sunny today.");
+
+
+//strict equality vs loose equality
+
+const PI = 3.14;
+
+if (PI == "3.14") {
+    console.log("PI is loosely equal to '3.14'");
+}
+else if(PI != 3.14){
+    console.log("PI is loosely not equal to 3.14");
+}
+
+
+else if (PI === "3.14") {
+    console.log("PI is strictly equal to '3.14'");
+}
+else if(PI !== 3.14){
+    console.log("PI is not strictly equal to 3.14");
+}
