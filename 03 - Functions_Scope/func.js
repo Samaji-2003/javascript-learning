@@ -25,7 +25,7 @@ console.log(isValidEmail("example@gmail.com"));
 
 
 function convertTemperature(){
-    
+
     const temp = Number(document.getElementById("Temperature").value);
     const toC = document.getElementById("toC");
     const toF = document.getElementById("toF");
@@ -33,11 +33,11 @@ function convertTemperature(){
 
     if(toC.checked){
         const celsius = (temp - 32) * 5/9;
-        document.getElementById("result").textContent = celsius;
+        document.getElementById("result").textContent = celsius.toFixed(2);
     }
     else if(toF.checked){
         const fahrenheit = (temp * 9/5) + 32;
-        document.getElementById("result").textContent = fahrenheit;
+        document.getElementById("result").textContent = fahrenheit.toFixed(2);
     }
     else{
         alert("Please select a conversion type.");
