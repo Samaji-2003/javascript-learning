@@ -1,0 +1,41 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    padding: 20px 20px ;
+    border: 0 solid #ccc;
+    box-shadow: 0 2px 5px rgba(35, 35, 35, 0.4);
+    text-align: center;
+    margin: 10% 30%;
+}
+
+h1 {
+    color: #221286;
+}
+
+#Temperature {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: #5a40ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #221286;
+}

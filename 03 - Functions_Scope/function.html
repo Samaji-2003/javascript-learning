@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Functions</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <form>
+        <h1>Temperature Converter</h1>
+        <input type="number" id="Temperature" value="0"><br>
+
+        <input type="radio" id="toC" name="Converter" >
+        <label for="toC">Fahrenheit To Celsius</label><br>
+
+        <input type="radio" id="toF" name="Converter" >
+        <label for="toF">Celsius To Fahrenheit</label><br><br>
+
+        <button type="button" onclick="convertTemperature()">submit</button><br>
+        <p id="result"></p>
+    </form>
     <script src="func.js"></script>
 </body>
 </html>
