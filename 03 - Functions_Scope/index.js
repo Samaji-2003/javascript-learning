@@ -43,3 +43,36 @@ const no2 = 2;
 const no3 = 3;
 nums(no1, no2, no3);
 
+//random password generator
+
+function passwordGenerator(length, lower, upper, numbers, symbols){
+    const lowerChars = "abcdefghijklmnopqrstuvwxyz";
+    const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numberChars = "0123456789";
+    const symbolChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+
+    const possibleChars = (lower ? lowerChars : "") +
+    (upper ? upperChars : "") +
+    (numbers ? numberChars : "") +
+    (symbols ? symbolChars : "");
+
+
+
+    let password = "";
+    for(let i =0; i<length; i++){
+        const randomIndex = Math.floor(Math.random() * possibleChars.length);
+        password += possibleChars[randomIndex];
+    }
+    return password;
+
+
+}
+
+const length = 12;
+const lower = true;
+const upper = true;
+const numbersFlag = true;
+const symbols = true;
+
+const password = passwordGenerator(length, lower, upper, numbersFlag, symbols);
+console.log("Generated Password:", password);
