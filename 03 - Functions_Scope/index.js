@@ -126,3 +126,17 @@ function capitalize(element,index, array){
 
 fruits.forEach(capitalize);
 console.log("Capitalized Fruits:", fruits);
+
+
+
+//map method
+
+const numsArr = [1, 2, 3, 4, 5];
+const squaredArr = numsArr.map(square);//returndiffrent array
+
+console.log("Original Array:", numsArr);
+console.log("Squared Array:", squaredArr);
+
+function square(no){
+    return no * no;
+}
