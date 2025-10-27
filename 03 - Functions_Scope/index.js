@@ -76,3 +76,53 @@ const symbols = true;
 
 const password = passwordGenerator(length, lower, upper, numbersFlag, symbols);
 console.log("Generated Password:", password);
+
+//callback function
+
+hello(greet);
+
+function hello(callback){
+    console.log("hello");
+    callback();
+}
+
+function greet() {
+    console.log("good morning");
+}
+
+sum(print , 1, 2);
+function sum(callback, a, b){
+    let result = a+b;
+    callback(result);
+}
+
+function print(r){
+    console.log("Sum is:", r);
+}
+
+//forEach method
+
+let numbersArr = [1, 2, 3, 4, 5];
+
+numbersArr.forEach(display);//display(1);display(2);
+
+function display(no){
+    console.log(no);
+}
+
+numbersArr.forEach(double);
+numbersArr.forEach(display);
+
+function double(no, index, arr){
+    arr[index] = no * 2;
+}
+
+
+let fruits = ["apple", "banana", "cherry"];
+
+function capitalize(element,index, array){
+    array[index]= element.charAt(0).toUpperCase()+ element.slice(1);
+}
+
+fruits.forEach(capitalize);
+console.log("Capitalized Fruits:", fruits);
