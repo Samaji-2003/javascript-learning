@@ -171,4 +171,25 @@ function sum(previous, currentValue){
     return previous + currentValue;
 }
 
+//function expression
 
+const multiply = function(a, b){
+    return a * b;
+}; 
+const result = multiply(4, 5);
+console.log("Multiplication Result:", result);
+
+
+const sqr = cart.map(function(no){
+    return no * no;
+});
+console.log(sqr);
+
+//arrow function
+
+const add = (a, b) => {
+    return a + b;
+};
+
+const result1 = add(4, 5);
+console.log("Addition Result:", result1);
