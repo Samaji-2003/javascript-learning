@@ -192,4 +192,30 @@ const add = (a, b) => {
 };
 
 const result1 = add(4, 5);
-console.log("Addition Result:", result1);
+console.log(result1);
+
+setTimeout(hello1, 2000);
+
+function hello1(){
+    console.log("Hello");
+}
+setTimeout(function(){
+    console.log("Hello");
+}, 2000);
+
+setTimeout  (() => {
+    console.log("Hello");
+}, 2000);
+
+const squares = cart.map(no => no * no);
+console.log("squares:", squares);
+
+const cube = cart.map(no => Math.pow(no, 3));
+console.log("cube:", cube);
+
+const isEven1 = cart.map(no => no % 2 === 0);
+console.log("isEven1:", isEven1);
+
+const reduce = cart.reduce((prev , curr)=> prev+curr);
+console.log("reduce:", reduce);
+
