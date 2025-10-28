@@ -140,3 +140,35 @@ console.log("Squared Array:", squaredArr);
 function square(no){
     return no * no;
 }
+
+//filter method
+
+const no = [10, 15, 20, 25, 30, 35, 40];
+const even = no.filter(isEven);
+
+function isEven(n){
+    return n % 2 === 0;
+}
+
+console.log("Even Numbers:", even);
+
+const words = ["apple", "banana", "avocado", "grape", "apricot"];
+const e = words.filter(includeE);
+
+function includeE(word){
+    return word.includes("e");
+}
+console.log("Words containing 'e':", e);
+
+//reduce method
+
+const cart = [5, 10, 15, 20];
+const total = cart.reduce(sum);
+
+console.log("Total Cart Value:", total);
+
+function sum(previous, currentValue){
+    return previous + currentValue;
+}
+
+
