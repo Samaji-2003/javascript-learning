@@ -402,3 +402,107 @@ const maxCalories = fruits.reduce((accumulator, fruit) =>
                                      accumulator < fruit.calories ? 
                                    fruit.calories : accumulator);
 console.log("Max Calories:", maxCalories);
+
+//sort
+
+const num = [5, 2, 8, 1, 4];
+
+num.sort();
+console.log("Sorted Numbers:", num);
+
+num.sort((a, b) =>a - b);
+console.log("Sorted Numbers Asc:", num);
+
+num.sort((a, b) =>b - a);
+console.log("Sorted Numbers Desc:", num);
+
+
+fruits.sort((a, b) => a.calories - b.calories);
+console.log("Fruits Sorted by Calories Asc:", fruits);
+
+fruits.sort((a, b) => a.name.localeCompare(b.name));
+console.log("Fruits Sorted by Name Asc:", fruits);
+
+
+//shuffle
+//fisher-yates algorithm
+
+const cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+shuffle(cards);
+console.log("Shuffled Cards:", cards);
+
+function shuffle(array){
+
+    for(let i=array.length -1 ;i>0 ; i--){
+        const random = Math.floor(Math.random() * (i + 1));
+
+        [array[i], array[random]] = [array[random], array[i]];
+    }
+}
+
+//date object
+
+const date = new Date();//Date(year, month, day, hours, minutes, seconds, milliseconds)
+console.log(date);
+
+const date1 = new Date(2022, 0, 15, 10, 30, 0);
+console.log(date1);
+
+const date2 = new Date("2022-01-15T10:30:00");
+console.log(date2);
+
+const date3 = new Date(9073778600000); //milliseconds since Jan 1, 1970
+console.log(date3);
+const year = date.getFullYear();
+console.log("Year:", year);
+const month = date.getMonth() + 1; //months are zero-based
+console.log("Month:", month);
+const day = date.getDate();
+console.log("Day:", day);
+
+const date4 = new Date();
+
+date4.setFullYear(2023);
+date4.setMonth(11); //December
+date4.setDate(25);
+
+console.log("Updated Date:", date4);
+
+const date5 = new Date("2022-12-31T23:59:59");
+const date6 = new Date("2023-01-01T00:00:00");
+
+if(date5 < date6){
+    console.log("date5 is earlier than date6");
+}
+
+//clouseure(allow for private variables)
+
+function outer(){
+    let msg = "Hello from outer function";
+
+    function inner(){
+        console.log(msg);
+    }
+
+    inner();
+}
+
+outer();
+function makeCounter(){
+    let count = 0;
+    //state maintain
+    function counter(){
+        
+        count++;
+        console.log("Count:", count);
+    }
+    return {counter}; // you can oly get that pass from this
+}
+
+const increment = makeCounter();// similar to create object
+
+increment.counter();
+increment.counter();
+increment.counter();
+
+//increment.count = 0; // does not work as count is private
