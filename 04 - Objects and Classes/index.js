@@ -506,3 +506,26 @@ increment.counter();
 increment.counter();
 
 //increment.count = 0; // does not work as count is private
+
+
+//setTimeout and setInterval
+
+function say(){
+    window.alert("hello")
+}
+
+const setTimeoutId = setTimeout(say, 3000); // after 3 seconds
+clearTimeout(setTimeoutId);
+
+//const setIntervalId = setInterval(say, 1000); // every 1 second
+
+
+function start(){
+    setTimeoutId = setInterval(say, 3000);
+    console.log("Started");
+}
+
+function stop(){
+    clearInterval(setTimeoutId);
+    console.log("Stopped");
+}
