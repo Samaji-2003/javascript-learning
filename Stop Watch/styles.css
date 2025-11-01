@@ -1,0 +1,52 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(210, 63%, 85%);
+}
+
+#myh1{
+    font-size: 4rem;
+    font-family: "arial", sans-serif;
+    color: hsl(210, 63%, 25%);
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px solid;
+    border-radius: 10px;
+    background-color: white;
+    padding: 30px;
+}
+
+#display{
+    font-size: 3rem;
+    font-family: "Courier New", Courier, monospace;
+    margin-bottom: 20px;
+}
+
+button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#start{
+    background-color: hsl(120, 63%, 45%);
+    color: white;
+}
+#stop{
+    background-color: hsl(0, 63%, 45%);
+    color: white;
+}
+#resetBtn{
+    background-color: hsl(240, 63%, 45%);
+    color: white;
+}
