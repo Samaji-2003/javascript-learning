@@ -101,3 +101,40 @@ element.style.border = "2px solid green";
 
 const allElements = document.querySelectorAll(".fruits");//returns all matches
 console.log("All elements with class 'fruits':", allElements);
+
+
+
+//DOM navigation
+
+//first element child
+const elem = document.getElementById("item-list");
+const firstChild = elem.firstElementChild;
+firstChild.style.color = "red";
+
+
+
+//last element child
+const elem1 = document.getElementById("product-list");
+const lastChild = elem1.lastElementChild;
+lastChild.style.backgroundColor = "purple";
+
+//next element sibling
+const element2 = document.getElementById("p1");
+const nextSibling = element2.nextElementSibling;
+nextSibling.style.fontSize = "40px";
+
+//previous element sibling
+const element3 = document.getElementById("p2");
+const previousSibling = element3.previousElementSibling;
+previousSibling.style.color = "aqua";
+
+//parent element
+const element4 = document.getElementById("p1");
+const parentElement = element4.parentElement;
+parentElement.style.backgroundColor = "lightgrey";
+
+//children
+const children = elem.children;
+for(let child of children){
+    child.style.fontWeight = "bold";
+}
