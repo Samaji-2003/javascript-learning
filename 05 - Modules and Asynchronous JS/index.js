@@ -43,3 +43,61 @@ finally{
 
 console.log("Program continues...");
 
+
+//DOM
+
+console.dir(document);
+console.log("Title of the document:", document.title); 
+
+document.body.style.backgroundColor = "#2c2626ff";
+
+const un = "Samaji";
+const hello = document.getElementById("hello");
+
+hello.textContent = "hi hi";
+
+//element selector
+
+const header = document.getElementById("hello");
+console.log("Header element:", header);
+header.style.color = "red";
+
+console.log(header.innerText);
+
+const fruits = document.getElementsByClassName("fruits");
+console.log("Fruits elements:", fruits);
+
+fruits[0].style.backgroundColor = "yellow";
+for(let fruit of fruits){
+    fruit.style.fontSize = "20px";
+}
+
+Array.from(fruits).forEach(fruit => {
+    fruit.style.color = "blue";
+});
+
+
+
+
+
+const h1Elements = document.getElementsByTagName("h1");
+console.log("H1 elements:", h1Elements);
+
+const ulElement = document.getElementsByTagName("ul");
+console.log("UL elements:", ulElement);
+
+ulElement[0].style.backgroundColor = "pink";
+
+Array.from(ulElement).forEach(ul => {
+    ul.style.fontSize = "18px";
+});
+
+
+const element = document.querySelector(".fruits");//only retunts first match
+console.log("First element with class 'fruits':", element);
+element.style.border = "2px solid green";
+
+
+
+const allElements = document.querySelectorAll(".fruits");//returns all matches
+console.log("All elements with class 'fruits':", allElements);
