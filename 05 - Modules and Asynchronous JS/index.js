@@ -49,7 +49,7 @@ console.log("Program continues...");
 console.dir(document);
 console.log("Title of the document:", document.title); 
 
-document.body.style.backgroundColor = "#2c2626ff";
+document.body.style.backgroundColor = "#4b4444ff";
 
 const un = "Samaji";
 const hello = document.getElementById("hello");
@@ -173,3 +173,77 @@ document.getElementById("fruits-list").insertBefore(newlist, document.getElement
 
 //remove
 document.getElementById("fruits-list").removeChild(newlist);
+
+
+
+
+//mouse events
+
+/*const btn = document.getElementById("btn");
+
+btn.addEventListener("click", callback);
+
+function callback(){
+    btn.style.backgroundColor = "orange";
+    console.log("Button clicked!");
+    btn.textContent = "Clicked";
+}
+
+const btn2 = document.getElementById("btn2");
+btn2.addEventListener("click", callback2);
+
+function callback2(event){
+    event.target.style.backgroundColor = "pink";
+    console.log("Button 2 clicked!");
+    event.target.textContent = "Clicked";
+}
+
+btn.addEventListener("mouseover", function(){
+    btn.style.backgroundColor = "yellow";
+});
+
+btn.addEventListener("mouseout", function(){
+    btn.style.backgroundColor = "lightblue";
+});
+
+//keyboard events
+document.addEventListener("keydown", event => {
+   // console.log(event);
+    console.log("Key pressed:", event.key);
+});
+
+document.addEventListener("keyup", event => {
+    console.log("Key released:", event.key);
+});
+*/
+
+const mybox = document.getElementById("mybox");
+/*document.addEventListener("keydown", event => {
+    if(event.key === "ArrowUp"){
+        mybox.style.backgroundColor = "green";
+    }
+
+    mybox.textContent = `Key pressed: ${event.key}`;
+});*/
+
+const move = 10;
+let x = 0;
+let y = 0;
+
+document.addEventListener("keydown", event => {
+    switch(event.key){
+        case "ArrowUp":
+            y -= move;
+            break;
+        case "ArrowDown":
+            y += move;
+            break;
+        case "ArrowLeft":
+            x -= move;
+            break;
+        case "ArrowRight":
+            x += move;
+            break;
+    }
+    mybox.style.transform = `translate(${x}px, ${y}px)`;
+});
