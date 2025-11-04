@@ -138,3 +138,38 @@ const children = elem.children;
 for(let child of children){
     child.style.fontWeight = "bold";
 }
+
+//1.create html elements
+const newh1 = document.createElement("h1");
+//2.add attributes and content
+newh1.textContent = "This is a new heading";
+newh1.style.color = "green";
+newh1.id = "new-heading";
+//3.insert into DOM
+document.body.append(newh1);
+document.body.prepend(newh1);
+document.getElementById("box1").append(newh1);
+
+const box2 = document.getElementById("box2");
+document.body.insertBefore(newh1, box2);
+
+//4.remove elements
+
+document.body.removeChild(newh1);
+//or
+newh1.remove();
+
+//if that inside another element
+//document.getElementById("box1").removeChild(newh1);
+
+
+const newlist =document.createElement("li");
+ newlist.textContent = "Mango";
+ newlist.id = "mango";
+
+ //document.body.append(newlist);
+document.getElementById("fruits-list").appendChild(newlist);
+document.getElementById("fruits-list").insertBefore(newlist, document.getElementById("banana"));
+
+//remove
+document.getElementById("fruits-list").removeChild(newlist);
