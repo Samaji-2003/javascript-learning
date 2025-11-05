@@ -30,3 +30,32 @@
     position: relative;
     font-size: 8rem;
 }
+
+.mybtns{
+    font-size: 4rem;
+    margin:10px;
+    padding: 5px;
+}
+
+#bb1{
+    background-color: rgb(150, 150, 250);
+    width: 300px;
+    height: 300px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    font-size: 8rem;
+}
+
+.rounded{
+    border-radius: 50%;
+}
+
+.shadow{
+    box-shadow: 10px 10px 5px grey;
+}
+
+.highlight{
+    background-color: yellow;
+}

@@ -247,3 +247,67 @@ document.addEventListener("keydown", event => {
     }
     mybox.style.transform = `translate(${x}px, ${y}px)`;
 });
+
+//
+const mybtn = document.getElementById("mybtn");
+const myimg = document.getElementById("myimg");
+mybtn.addEventListener("click", () => {
+
+    if(myimg.style.visibility === "hidden"){
+        myimg.style.visibility = "visible";
+        mybtn.textContent = "hide";
+        
+    }else{
+    myimg.style.visibility = "hidden";
+    mybtn.textContent = "show";
+    }
+});
+
+//node list
+
+let buttons = document.querySelectorAll(".mybtns");
+console.log(buttons);
+
+buttons.forEach(button => {
+    button.style.backgroundColor = "lightgreen";
+    button.textContent += "🥰";
+});
+ buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        
+        button.style.backgroundColor = "red";
+        
+    });
+    
+});
+
+buttons.forEach(button => {
+    button.addEventListener("mouseover", () => {
+        button.style.backgroundColor = "blue";
+    });
+    button.addEventListener("mouseout", () => {
+        button.style.backgroundColor = "lightgreen";
+    });
+});
+
+
+const btn5 = document.createElement("button");
+btn5.textContent = "New Button";
+btn5.classList = "mybtns";
+
+document.body.appendChild(btn5);
+
+console.log(buttons);
+
+buttons = document.querySelectorAll(".mybtns");
+console.log(buttons);
+
+//class list
+const mybox2 = document.getElementById("bb1");
+console.log(mybox2.classList);
+
+mybox2.classList.add("rounded");
+mybox2.classList.add("shadow");
+mybox2.addEventListener("mouseover", () => {
+    mybox2.classList.add("highlight");
+});
