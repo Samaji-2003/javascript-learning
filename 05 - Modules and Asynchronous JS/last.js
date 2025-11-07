@@ -59,6 +59,8 @@ cleanHouse().then(() => {
 });
 
 //Async/Await
+//async = function that always returns a promise
+//await = wait for a promise to be resolved
  async function performTasks(){
     const walkDogr =await walkDog();
     console.log(walkDogr);
@@ -71,3 +73,19 @@ cleanHouse().then(() => {
 
     console.log("All tasks completed");
  }
+
+
+ //json
+
+ const names = ["John", "Jane", "Doe", "Alice", "Bob"];
+
+ const namesJSON = JSON.stringify(names);
+ console.log(namesJSON);//converts to json string as one line
+
+ const namesArray = JSON.parse(namesJSON);
+ console.log(namesArray);//converts back to array
+
+    import person from './person.json' assert {type: 'json'};
+    console.log(person);
+
+    
