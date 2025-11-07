@@ -58,3 +58,16 @@ cleanHouse().then(() => {
     });
 });
 
+//Async/Await
+ async function performTasks(){
+    const walkDogr =await walkDog();
+    console.log(walkDogr);
+
+    const cleanHouser = await cleanHouse();
+    console.log(cleanHouser);
+
+    const cookFoodr = await cookFood();
+    console.log(cookFoodr);
+
+    console.log("All tasks completed");
+ }
