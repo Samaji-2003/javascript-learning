@@ -41,9 +41,9 @@ function calculate() {
 }
 
 
-const a = "123";
-const b = 99.99;
-const c = true;
+let a = "123";
+let b = 99.99;
+let c = true;
 
 a = Number(a);
 b = Math.floor(b);
@@ -54,3 +54,119 @@ console.log(typeof b);
 console.log(typeof c);
 
 
+
+
+function checkAge() {
+    const userAge = document.getElementById("userAge").value;
+    if(userAge >= 18) {
+        document.getElementById("ageResult").innerText = "You are an adult.";
+    }
+    else if(userAge > 13 && userAge < 18) {
+        document.getElementById("ageResult").innerText = "You are a teenager.";
+    }
+    else {
+        document.getElementById("ageResult").innerText = "You are a child.";
+    }
+
+}
+
+function checkGrade() {
+    const userGrade = document.getElementById("userGrade").value;
+
+    switch(userGrade){
+        case 'userGrade>75':
+            document.getElementById("gradeResult").innerText = "A";
+        case 'userGrade>60':
+            document.getElementById("gradeResult").innerText = "B";
+        case 'userGrade>50':
+            document.getElementById("gradeResult").innerText = "C";
+        case 'userGrade>40':
+            document.getElementById("gradeResult").innerText = "D";
+        default:
+            document.getElementById("gradeResult").innerText = "F";
+    }
+}
+
+function checkNumber() {
+    const userNumber = document.getElementById("userNumber").value;
+
+    switch(userNumber){
+        case '1':
+            document.getElementById("numberResult").innerText = `you selected ${document.getElementById("item1").innerText}`;
+            break;
+        case '2':
+            document.getElementById("numberResult").innerText = `you selected ${document.getElementById("item2").innerText}`;
+            break;
+        case '3':
+            document.getElementById("numberResult").innerText = `you selected ${document.getElementById("item3").innerText}`;
+            break;
+        case '4':
+            document.getElementById("numberResult").innerText = `you selected ${document.getElementById("item4").innerText}`;
+            break;
+        default:
+            document.getElementById("numberResult").innerText = "Invalid selection";
+    }
+}
+
+function login(){
+    const username = document.getElementById("userName").value;
+    const password = document.getElementById("userPassword").value;
+
+    if(username === "admin" && password === "1234"){
+        document.getElementById("loginResult").innerText = "Login successful!";
+    }
+    else{
+        document.getElementById("loginResult").innerText = "Login failed!";
+    }
+}
+
+
+//loops
+
+function printNumbers() {
+    for(let i=1; i<=10; i++) {
+        console.log(i);
+    }
+}
+
+printNumbers();
+
+function printEvenNumbers() {
+    for(let i=1; i<=20; i++) {
+        if(i % 2 === 0) {
+            console.log(i);
+        }
+    }
+}
+printEvenNumbers();
+
+function sumNumbers() {
+    let sum = 0;
+    for(let i = 1; i<=100; i++){
+        sum += i;
+    }
+    console.log("Sum: " + sum);
+}
+sumNumbers();
+function factorial(num){
+    let result = 1;
+    for(let i = 1; i <= num; i++){
+        result *= i;
+    }
+    return result;
+}
+factorial(5);
+
+
+function guess(){
+    const no = 10;
+    const guessNo = Math.floor(Math.random() * 20) + 1;
+    while(guessNo !== no){
+        console.log("You guessed: " + guessNo + ". Try again!");
+        return;
+    }
+    if(guessNo === no){
+        console.log("Congratulations! You guessed the correct number: " + no);
+    }
+}
+guess();
