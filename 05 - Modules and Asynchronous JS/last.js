@@ -85,7 +85,30 @@ cleanHouse().then(() => {
  const namesArray = JSON.parse(namesJSON);
  console.log(namesArray);//converts back to array
 
-    import person from './person.json' assert {type: 'json'};
-    console.log(person);
 
-    
+
+fetch("person.json")
+.then(response => response.json())
+.then(values => values.forEach(value => console.log(value.name)))
+.catch(error => console.log("Error: " + error));
+
+//fetch api
+
+//http req to fetch resources
+
+
+fetch(" https://pokeapi.co/api/v2/pokemon/pikachu")
+.then(response => response.json())
+.then(data => console.log(data.name))
+.catch(error => console.log("Error: " + error));
+
+async function fetchData(params) {
+    try{
+        const response = await fetch(" https://pokeapi.co/api/v2/pokemon/typhlosion");
+        const data = await response.json();
+        console.log(data.name);
+    }
+     catch (error) {
+        console.log("Error: " + error);
+    }
+}
