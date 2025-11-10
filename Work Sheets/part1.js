@@ -170,3 +170,43 @@ function guess(){
     }
 }
 guess();
+
+function square(number){
+    return number * number;
+}
+
+console.log(square(5));
+
+function bmi(weight, height){
+    const bmiValue = weight / (height * height);
+    return bmiValue.toFixed(2);
+}
+
+bmi(54, 1.65);
+
+function prime(num){
+    if(num <= 1) return false;
+    for(let i = 2; i < num; i++){
+        if(num % i === 0) return false;
+    }
+    return true;
+}
+console.log(prime(7));
+
+function reverse(word){
+    for(let i = word.length - 1; i >= 0; i--){
+        console.log(word[i]);
+    }
+}
+
+reverse("hello");
+
+(num) => {
+    if(num % 2 === 0){
+        console.log("Even");
+    }
+    else{
+        console.log("Odd");
+    }
+
+}
