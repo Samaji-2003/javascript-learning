@@ -201,7 +201,7 @@ function reverse(word){
 
 reverse("hello");
 
-(num) => {
+let checkEvenOdd = (num) => {
     if(num % 2 === 0){
         console.log("Even");
     }
@@ -210,3 +210,55 @@ reverse("hello");
     }
 
 }
+checkEvenOdd(10);
+
+//arrays
+ let no = [1, 2, 3, 4, 5];
+let max = 0;
+ for(let i = 0; i < no.length; i++){
+    
+    if(no[i]>max){
+        max = no[i];
+    }
+}
+console.log("Max: " + max);
+
+
+let min = no[0];
+ for(let i = 0; i < no.length; i++){
+    
+    if(no[i]<min){
+        min = no[i];
+    }
+ }
+ console.log("Min: " + min);
+let sum = 0;
+ for(let i = 0; i < no.length; i++){
+     sum += no[i];
+ }
+ console.log("Sum: " + sum);
+    let avg = sum / no.length;
+    console.log("Avg: " + avg);
+
+let double =  no.map(function(num){
+    return num * 2;
+});
+console.log("Doubled Array: " + double);
+
+let oddno = no.filter((num)=> num % 2 !== 0);
+console.log("Odd Numbers: " + oddno);
+
+let product = no.reduce((acc , curr) => acc * curr);
+console.log("Product: " + product);
+
+no.sort((a, b) => a-b);
+console.log("Ascending Array: " + no);
+
+no.sort((a, b) => b-a);
+console.log("Descending Array: " + no);
+
+
+const word = "string";
+
+const vowel = ['a', 'e', 'i', 'o', 'u'];
+let count = 0;
