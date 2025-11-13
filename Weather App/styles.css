@@ -1,0 +1,62 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+
+.weatherForm {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.cityInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.getWeatherBtn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.getWeatherBtn:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cityName {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.temperature,
+.humidity,
+.description,
+.emoji,
+.errorDisplay {
+    font-size: 18px;
+    margin: 5px 0;
+    
+}
+
+.errorDisplay {
+    color: red;
+    display: none;
+}
