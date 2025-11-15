@@ -262,3 +262,97 @@ const word = "string";
 
 const vowel = ['a', 'e', 'i', 'o', 'u'];
 let count = 0;
+for(let i = 0; i < word.length; i++){
+    if(vowel.includes(word[i].toLocaleLowerCase())){
+        count++;
+    }
+}
+console.log("Number of Vowels: " + count);
+
+const hello = "hello world";
+hello[0].toUpperCase() + hello.slice(1) + hello[6].toUpperCase() + hello.slice(7);
+console.log(hello);
+
+const phrase = "the quick brown js fox";
+const words = phrase.split(" ");
+
+for(let i = 0; i < words.length; i++){
+    if(words[i].toLowerCase() !== "js"){
+        console.log("this contains js");
+    }
+}
+
+let sentence = "javascript is bad";
+sentence = sentence.replace("bad", "good");
+
+let reverseWord = "";
+for(let i = word.length - 1; i >= 0; i--){
+    reverseWord += word[i];
+}
+
+//counter
+
+let counter = 0;
+function increaseCount() {
+    counter = counter + 1;
+    document.getElementById("counterValue").innerText = counter;
+
+}
+
+function decreaseCount() {
+    counter = counter - 1;
+    document.getElementById("counterValue").innerText = counter;
+}
+
+function resetCount() {
+    counter = 0;
+    document.getElementById("counterValue").innerText = counter;
+}
+
+
+//temperature converter
+
+function ctof() {
+    let temp1 = document.getElementById("temp").value;
+    temp1 = (temp1 * 9/5) + 32;
+    document.getElementById("tempResult").innerText = "Temperature in Fahrenheit: " + temp1;
+    console.log(temp1);
+}
+
+function ftoc() {
+    let temp2 = document.getElementById("temp").value;
+    temp2 = (temp2 - 32) * 5/9;
+    document.getElementById("tempResult").innerText = "Temperature in Celsius: " + temp2;
+    console.log(temp2);
+}
+
+//dice roller
+
+function rollDice() {
+    const roll = Math.floor(Math.random() * 6) + 1;
+    document.getElementById("diceResult").innerText = "You rolled a " + roll;
+    console.log(roll);
+
+    switch(roll){
+        case 1:
+            document.getElementById("diceImage").src = "../diceRoller/img/1c.gif";
+            console.log("1");
+            break;
+        case 2:
+            document.getElementById("diceImage").src = "../diceRoller/img/2c.gif";  
+            console.log("2");
+            break;
+        case 3:
+            document.getElementById("diceImage").src = "../diceRoller/img/3c.gif";  
+            break;
+        case 4:
+            document.getElementById("diceImage").src = "../diceRoller/img/4c.gif";  
+            break;
+        case 5:
+            document.getElementById("diceImage").src = "../diceRoller/img/5c.gif";  
+            break;
+        case 6:
+            document.getElementById("diceImage").src = "../diceRoller/img/6c.gif";  
+            break;
+    }
+}
